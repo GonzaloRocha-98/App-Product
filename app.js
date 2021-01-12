@@ -29,7 +29,7 @@ class UI{
 
     }
 }
-document.getElementById('product-form').addEventListener('submit',function(){
+document.getElementById('product-form').addEventListener('submit',function(e){
     const name = document.getElementById('name').value;
     const price = document.getElementById('price').value;
     const year = document.getElementById('year').value;
@@ -39,4 +39,5 @@ document.getElementById('product-form').addEventListener('submit',function(){
     const ui = new UI();
     ui.addProduct(product);
     console.log(name, price, year);
+    e.preventDefault();
 })
